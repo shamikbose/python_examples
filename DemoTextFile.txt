@@ -1,0 +1,15 @@
+During training,  the neural network tries to matchf∗(x) andf(x). The
+training data contains approximate examples of f∗(x) and a label y≈f∗(x).The 
+training examples are used to directly specify what the output layer should 
+produce at each data point x, but it does not specify what the intermediate 
+layers do. The learning algorithm decides what to do with these layers to 
+produce the closest possible approximation of f∗. These intermediate layers 
+are also called hidden layers since  the  training  data  does  not  show  
+what  the  desired  output  of  these  layers  should  be.   The accuracy 
+during training is defined in terms of loss.  There are multiple ways of 
+determining the loss depending on the type of model.  Neural networks are 
+typically non-linear and this causes most interesting loss functions like 
+logistic or linear regression to become non-convex.  Some of the 
+most commonly used loss functions are maximum-likelihood estimation and mean 
+absolute error. In maximum likelihood estimation, the cost function is the 
+cross-entropy between the training data and the model distribution
