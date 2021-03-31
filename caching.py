@@ -8,7 +8,7 @@ def fib(n: int):
     else:
         return fib(n-1)+fib(n-2)
 
-@lru_cache(maxsize=128)   
+@lru_cache(maxsize=128)
 def fib_cached(n: int):
     if n<=1:
         return 1
