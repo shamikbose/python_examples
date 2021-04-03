@@ -15,5 +15,6 @@ def AutoComplete(repository, query):
 			subquery=query[:endPos]
 
 repository = ["mobile", "mouse", "moneypot", "monitor", "mousepad", "matchstick", "mascara"]
-customerQuery = "mouse"
+customerQuery = input("Enter the query: ")
+print(customerQuery)
 AutoComplete(repository,customerQuery)
