@@ -1,11 +1,11 @@
 class Solution:
-# @param {integer} n
-# @return {string[]}
+    # @param {integer} n
+    # @return {string[]}
     def generateParenthesis(self, n):
         if not n:
             return []
         left, right, ans = n, n, []
-        self.dfs(left,right, ans, "")
+        self.dfs(left, right, ans, "")
         return ans
 
     def dfs(self, left, right, ans, string):
@@ -15,8 +15,8 @@ class Solution:
             ans.append(string)
             return
         if left:
-            self.dfs(left-1, right, ans, string + "(")
+            self.dfs(left - 1, right, ans, string + "(")
         if right:
-            self.dfs(left, right-1, ans, string + ")")
+            self.dfs(left, right - 1, ans, string + ")")
 
     print(self.generateParenthesis(3))
