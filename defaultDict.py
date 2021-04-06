@@ -9,34 +9,34 @@ from collections import defaultdict
 
 # Complete the freqQuery function below.
 def freqQuery(queries):
-    dict_valueCount=defaultdict(int)
-    output=[]
-    flag=0
+    dict_valueCount = defaultdict(int)
+    output = []
+    flag = 0
     for line in queries:
-        #print line
-        if line[0]==1:
-            dict_valueCount[line[1]]+=1
-        elif line[0]==2:
-            if dict_valueCount[line[1]]!=0:
-                dict_valueCount[line[1]]-=1
-            if dict_valueCount[line[1]]==0:
+        # print line
+        if line[0] == 1:
+            dict_valueCount[line[1]] += 1
+        elif line[0] == 2:
+            if dict_valueCount[line[1]] != 0:
+                dict_valueCount[line[1]] -= 1
+            if dict_valueCount[line[1]] == 0:
                 del dict_valueCount[line[1]]
         else:
             for key in dict_valueCount.keys():
-                if dict_valueCount[key]==line[1]:
-                    flag=1
+                if dict_valueCount[key] == line[1]:
+                    flag = 1
                     break
-            if flag==1:
+            if flag == 1:
                 output.append(1)
-                flag=0
+                flag = 0
             else:
                 output.append(0)
-        #print dict_valueCount
+        # print dict_valueCount
     return output
 
 
-if __name__ == '__main__':
-    #fptr = open(os.environ['OUTPUT_PATH'], 'w')
+if __name__ == "__main__":
+    # fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
     q = int(raw_input().strip())
 
@@ -47,7 +47,7 @@ if __name__ == '__main__':
 
     ans = freqQuery(queries)
 
-    print '\n', ans
-    print '\n'
+    print "\n", ans
+    print "\n"
 
-    #fptr.close()
+    # fptr.close()
